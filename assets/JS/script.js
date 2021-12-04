@@ -1,12 +1,15 @@
 
 var typedCityName = document.querySelector("#CITY");
 var formClassEl = document.querySelector("#formClass");
+var weatherResultsEl = document.querySelector("#weatherResults");
+var weatherIconEl = document.querySelector("#weatherIcon");
+var tempEl = document.querySelector("#temp");
 
 var formSubmitHandler = function(event) {
 
     event.preventDefault();
     
-    var cityName = typedCityName.value.trim();
+    let = cityName = typedCityName.value.trim();
 
     if (cityName) {
         getCityForcast(cityName)
@@ -20,9 +23,22 @@ fetch(apiUrl)
     .then(function(response) {
 
     if (response.ok) {
+        response.json().then(function(data) {
+            console.log(data);
+            weatherResultsEl.textContent = (data.name);
+            tempEl.innerHTML = (data.main.temp)
+            
 
-        console.log(response);
+        let SAVEDdataScript = JSON.parse(localStorage.getItem(data));
+            if(SAVEDdataScript === null) {
+                SAVEDdataScript = [];
+            }
+            SAVEDdataScript.push(data)
+            localStorage.setItem('weather', JSON.stringify(SAVEDdataScript))
+                
+        })
     }
 })
 };
+
 formClassEl.addEventListener("click", formSubmitHandler)
