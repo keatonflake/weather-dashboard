@@ -19,16 +19,16 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
 // const API_Key = '&appid=fb0edd857bab8092d150bbc076d9150a'
 
-// var formSubmitHandler = function(event) {
+var formSubmitHandler = function(event) {
 
-//     event.preventDefault();
-     
-//      let = cityName = typedCityName.value.trim();
- 
-//      if (cityName) {
-//          getWeatherData(cityName)
-//      }
-//  }
+    event.preventDefault();
+    
+    let = cityName = typedCityName.value.trim();
+
+    if (cityName) {
+        getWeatherData(cityName)
+    }
+}
 
 setInterval(() => {
     const time = new Date();
@@ -46,8 +46,8 @@ setInterval(() => {
     dateEl.innerHTML = days[day] + ', ' + date+ ' ' + months[month]
 }, 1000)
 
-function getWeatherData () {
-    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + "seattle" + "&units=imperial&appid=fb0edd857bab8092d150bbc076d9150a";
+function getWeatherData (cityname) {
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&units=imperial&appid=fb0edd857bab8092d150bbc076d9150a";
     fetch(apiUrl)
         .then(response => response.json()).then(data => {
             console.log(data)
@@ -61,10 +61,9 @@ function getWeatherData () {
             WINDSPEED_El.innerHTML = WINDSPEEDSTRING
     })
 }
-getWeatherData()
 // temperature, the humidity, the wind speed, and the UV index
 // function showWeatherData(data) {
 
 // }
 
-// formClassEl.addEventListener("click", formSubmitHandler)
+formClassEl.addEventListener("click", formSubmitHandler)
