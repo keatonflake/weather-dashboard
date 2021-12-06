@@ -33,23 +33,26 @@
 <!-- weather info per reqirements -->
             <div class="others" id="currentWeatherItems">
                 <div class="weatherItem">
-                    <div>temperature</div>
-                    <div>75 degrees</div>
+                    <div> temp </div>
+                    <div id="TEMP">degrees</div>
+                    <p>°F</p>
                 </div>
-
+        
                 <div class="weatherItem">
                     <div>humidity</div>
-                    <div>60.4%</div>
+                    <div id="HUMIDITY"></div>
+                    <p>%</p>
                 </div>
-
+        
                 <div class="weatherItem">
                     <div>wind speed</div>
-                    <div>20 mph</div>
+                    <div id="WINDSPEED"></div>
+                    <p>mph</p>
                 </div>
-
+        
                 <div class="weatherItem">
                     <div>UV index</div>
-                    <div>3.2</div>
+                    <div id="UVI"></div>
                 </div>
            
             </div>
@@ -67,7 +70,7 @@
     <div class="today" id="currentTemp">
         <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
         <div class="other">
-            <div class="day">Saturday</div>
+            <div id="dayoftheweek" class="day">Saturday</div>
             <div class="temp">Low - 50.7&#176; F</div>
             <div class="temp">High - 80.7&#176; F</div>
         </div>
@@ -82,7 +85,7 @@
         </div>
 
         <div class="weatherForecast-Item">
-            <div class="day">Sun</div>
+            <div  class="day">Sun</div>
             <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
             <div class="temp">Low - 50.7&#176; F</div>
             <div class="temp">High - 80.7&#176; F</div>
@@ -108,11 +111,21 @@
             <div class="temp">Low - 50.7&#176; F</div>
             <div class="temp">High - 80.7&#176; F</div>
         </div>
+
+        <div class="weatherForecast-Item">
+            <div class="day">Sun</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Low - 50.7&#176; F</div>
+            <div class="temp">High - 80.7&#176; F</div>
+        </div>
+
     </div>
 </div>
     <br>
     <br>
 <!-- the temperature, the humidity, the wind speed, and the UV index -->
-    <script src = "./assets/JS/script.js"></script>
+<script src = "./assets/JS/test.js"></script>
+<script src = "./assets/JS/script.js"></script>
+    
 </body>
 </html>
