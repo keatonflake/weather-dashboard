@@ -7,7 +7,6 @@
 }
 
 body{
-    position: center;
     background-color: #d9d9d9;
     background-size: cover;
     overflow:hidden;
@@ -18,22 +17,20 @@ body{
 .container {
     padding: 20px 70px;
     justify-content: center;
-    position: center;
-    
     
 }
 
 .btn {
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     font-size: 25px;
 }
 
 label{
     font-weight: bold 50;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .currentInfo {
@@ -44,22 +41,20 @@ label{
 
 .dateContainer{
     font-weight: 300;
-    font-size: 50px;
-    
 }
 
 .dateContainer .time{
-    font-size: 80px;
-    
+    font-size: 70px;
+    font-weight: 300;
 }
 
 .dateContainer #am-pm{
     font-size: 30px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .dateContainer .date {
-    font-size: 50px;
+    font-size: 30px;
     
 }
 
@@ -74,7 +69,7 @@ label{
     flex-direction: column;
     background: rgba(31, 31, 31, 0.787);
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     margin: 10px 0;
     border: 2px solid white;
 }
@@ -92,20 +87,18 @@ label{
     display: flex;
     color: white;
     width: 100%;
-    height: 35%;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
 }
 
 .futureForecast .today {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 50px;
 }
-.futureForecast .today .day{
-    padding: 5px 10px;
+
+ .futureForecast .today .day{
+    padding: 5px 15px;
     background: rgb(59, 59, 59);
     border-radius: 50px;
     text-align: center;
@@ -113,7 +106,7 @@ label{
 }
 
 .futureForecast .today .temp {
-    font-size: 20px;
+    font-size: 30px;
     padding-top: 15px;
 }
 
@@ -143,7 +136,7 @@ label{
     font-weight: 200;
 }
 
-@media only screen and (max-width:730px){
+@media only screen and (max-width:730px) {
     .futureForecast{
         justify-content: start;
         align-items: none;
@@ -158,3 +151,5 @@ label{
         overflow-y: scroll;
     }
 }
+
+
